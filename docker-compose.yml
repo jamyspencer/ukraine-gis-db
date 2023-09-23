@@ -1,0 +1,12 @@
+services:
+ 
+  db:
+    build: . 
+    restart: always
+    ports:
+      - "5001:5432"
+    volumes:
+    - pgdata:/Users/jamyspencer/workspace/postgresql/data
+
+volumes:
+  pgdata:
