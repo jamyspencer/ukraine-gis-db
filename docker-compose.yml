@@ -3,10 +3,14 @@ services:
   db:
     build: . 
     restart: always
+    environment:
+      - POSTGRES_USER=gis_admin
+      - POSTGRES_PASSWORD=leroy
+      - POSTGRES_DB=gis
     ports:
       - "5001:5432"
     volumes:
-    - pgdata:/Users/jamyspencer/workspace/postgresql/data
+      - pgdata:/Users/jamyspencer/workspace/postgresql/data
 
 volumes:
   pgdata:
